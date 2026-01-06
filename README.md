@@ -5,6 +5,14 @@ Google スプレッドシートから名札データを取得し、名刺画像�
 
 ## クイックスタート
 
+1. リポジトリをクローンする
+
+```bash
+git clone https://github.com/RiCoDeKu/GI.git
+```
+
+2. 必要なライブラリ・モジュールをインストールし，`main.py`を実行する
+
 ```bash
 pip install -r requirements.txt
 python main.py
