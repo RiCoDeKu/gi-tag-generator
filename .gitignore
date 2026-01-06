@@ -1,6 +1,10 @@
 .gitignore
 .DS_Store
+.*
+__*
 src
+seed
+output
+list/temp_name_tags.xlsx
 *.txt
-*.png
-*.xlsx
+archive
