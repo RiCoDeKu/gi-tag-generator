@@ -95,3 +95,45 @@ fetch_data(sheet_url="...")
 - `app/qr.py`: QR 画像を生成します。
 - `app/util.py`: 文字列の正規化ユーティリティ。
 - `app/cleaner.py`: QR キャッシュ削除と Excel の初期化を行います。
+
+## 開発環境
+
+Hardware Overview:
+
+```
+Model Name: MacBook Pro
+Model Identifier: Mac14,7
+Chip: Apple M2
+Total Number of Cores: 8 (4 performance and 4 efficiency)
+Memory: 16 GB
+```
+
+Operating System Overview
+
+```
+ProductName:            macOS
+ProductVersion:         15.7.3
+```
+
+Python Version
+
+```
+Python 3.10.18
+```
+
+Package List
+
+```
+Package         Version
+--------------- -----------
+et-xmlfile      2.0.0
+numpy           2.2.6
+openpyxl        3.1.5
+pandas          2.3.3
+pillow          12.1.0
+python-dateutil 2.9.0.post0
+pytz            2025.2
+qrcode          8.2
+six             1.17.0
+tzdata          2025.3
+```
