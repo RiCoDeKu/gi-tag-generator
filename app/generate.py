@@ -89,7 +89,7 @@ def create_card(logo_path, name_jp, name_en, faculty, department, grade, role, m
         canvas.alpha_composite(logo, (bg_x, bg_y))
 
     except Exception as e:
-        print(f"Logo load error: {e}")
+        print(f"[ERROR] Logo load error: {e}")
         # ロゴがない場合のプレビュー用円形
         draw.ellipse((width//2 - 200, height//2 - 200, width//2 + 200, height//2 + 200), fill=(200, 200, 200, 50))
 
@@ -181,7 +181,7 @@ def create_card(logo_path, name_jp, name_en, faculty, department, grade, role, m
             caption_y = qr_y - caption_text_height - 8  # QRコードの上に少し余白を持たせて配置
             draw.text((caption_x, caption_y), caption_text, fill=dark_gray, font=font_small)
         except Exception as e:
-            print(f"QR code load error: {e}")
+            print(f"[ERROR] QR code load error: {e}")
 
         return canvas
 

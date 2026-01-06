@@ -48,7 +48,7 @@ def create_qr_codes_from_excel(excel_path='./list/name_tags.xlsx', output_dir='s
         
         # URLカラムが存在するか確認
         if 'URL' not in df.columns:
-            print("エラー: 'URL'カラムが見つかりません")
+            print("[ERROR]'URL'カラムが見つかりません")
             return
         
         # 各行に対してQRコードを生成

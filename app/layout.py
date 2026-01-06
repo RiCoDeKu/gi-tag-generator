@@ -39,7 +39,7 @@ def create_business_card_sheets(project_code: str):
     total_cards = len(df)
     total_pages = (total_cards + cards_per_page - 1) // cards_per_page
 
-    print(f"Total cards: [ {total_cards} ], Total pages: [ {total_pages} ]")
+    print(f"[INFO] Total cards: [ {total_cards} ], Total pages: [ {total_pages} ]")
 
     # 点線を描画する関数
     def draw_dashed_line(draw, start, end, dash_length=20, gap_length=10, color=(150, 150, 150), width=2):

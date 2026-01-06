@@ -1,11 +1,17 @@
-import sys
+"""
+名札作成メインスクリプト
+How to use:
+1. 必要なライブラリをインストールします。
+   pip install -r requirements.txt
+2. スクリプトを実行します。
+   python main.py
+"""
 from app.fetch import *
 from app.generate import *
 from app.layout import *
 from app.qr import *
 from app.util import *
 from app.cleaner import *
-from tqdm import tqdm
 
 def pbar_update(pbar, step_description):
 	pbar.set_description(step_description)
