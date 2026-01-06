@@ -98,7 +98,7 @@ fetch_data(sheet_url="...")
 
 ## 開発環境
 
-Hardware Overview:
+Hardware Overview
 
 ```
 Model Name: MacBook Pro
