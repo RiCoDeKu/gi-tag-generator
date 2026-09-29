@@ -4,6 +4,7 @@ QRコードの生成と保存を行うモジュール
 import qrcode
 import pandas as pd
 import os
+from app.util import get_color
 
 def create_qr_codes_from_excel(excel_path='./list/name_tags.xlsx', output_dir='src/qr', qr_path=None, caption=None):
     """
@@ -48,7 +49,7 @@ def create_qr_codes_from_excel(excel_path='./list/name_tags.xlsx', output_dir='s
         
         # URLカラムが存在するか確認
         if 'URL' not in df.columns:
-            print("[ERROR]'URL'カラムが見つかりません")
+            print(f"{get_color('red')}[ERROR]'URL'カラムが見つかりません{get_color('reset')}")
             return
         
         # 各行に対してQRコードを生成

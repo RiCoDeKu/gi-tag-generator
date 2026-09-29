@@ -1,8 +1,4 @@
-.gitignore
-.DS_Store
 .*
 __*
-seed
 output
-list/temp_name_tags.xlsx
-archive
+list/name_tags.xlsx

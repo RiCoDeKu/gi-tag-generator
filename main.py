@@ -27,8 +27,8 @@ def main():
 	p = project_dataframe_extraction(df, project_code=project_code)
 
 	if len(p) == 0:
-		print(f"[ERROR] No records found for project code: {project_code}")
-		exit(1)
+		exit_error(f"No records found for project code: {project_code}")
+		
 
 	# 名刺シートを作成
 	create_business_card_sheets(project_code=project_code)
