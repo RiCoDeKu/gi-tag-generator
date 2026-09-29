@@ -5,6 +5,7 @@ import os
 from PIL import Image, ImageDraw, ImageFont
 import pandas as pd
 from app.qr import create_qr_codes_from_excel # QRコード生成関数
+from app.util import exit_error
 
 def create_card(logo_path, name_jp, name_en, faculty, department, grade, role, message, message2, campus, url, caption):
     # 名刺サイズ (91mm x 55mm) を高解像度で作成 (300dpi想定: 1075x650 px)
@@ -89,7 +90,7 @@ def create_card(logo_path, name_jp, name_en, faculty, department, grade, role, m
         canvas.alpha_composite(logo, (bg_x, bg_y))
 
     except Exception as e:
-        print(f"[ERROR] Logo load error: {e}")
+        exit_error(f"Logo load error: {e}")
         # ロゴがない場合のプレビュー用円形
         draw.ellipse((width//2 - 200, height//2 - 200, width//2 + 200, height//2 + 200), fill=(200, 200, 200, 50))
 
@@ -181,7 +182,7 @@ def create_card(logo_path, name_jp, name_en, faculty, department, grade, role, m
             caption_y = qr_y - caption_text_height - 8  # QRコードの上に少し余白を持たせて配置
             draw.text((caption_x, caption_y), caption_text, fill=dark_gray, font=font_small)
         except Exception as e:
-            print(f"[ERROR] QR code load error: {e}")
+            exit_error(f"QR code load error: {e}")
 
         return canvas
 
