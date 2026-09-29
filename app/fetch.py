@@ -18,20 +18,24 @@ def get_excel_path():
 
 	return XLSX_FILE_PATH
 
-def fetch_data(sheet_url: str=get_excel_path()) -> pd.DataFrame:
+def fetch_data(sheet_url: str | None = None) -> pd.DataFrame:
 	"""
 	指定されたGoogleスプレッドシートのURLからExcelファイルをダウンロードし、DataFrameに変換して返す
 	
 	Parameters:
 	-----------
-	sheet_url : str
-		GoogleスプレッドシートのエクスポートURL
+	sheet_url : str | None
+		GoogleスプレッドシートのエクスポートURL。
+		省略時は環境変数 EXCEL_FILE_PATH から取得する。
 	
 	Returns:
 	--------
 	pd.DataFrame
 		ダウンロードしたデータを含むDataFrame
 	"""
+	if sheet_url is None:
+		sheet_url = get_excel_path()
+
 	# 一時的にExcelファイルを保存するパス
 	temp_excel_path = './list/name_tags.xlsx'
 	
